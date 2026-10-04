@@ -11,6 +11,8 @@ A **.NET 8** library that connects applications to **Odoo** through its external
 
 The XML-RPC client is written from scratch on top of `HttpClient` and `System.Xml`, with no third-party libraries. Error messages are available in **English and Spanish**.
 
+![Odoo connector for .NET: create and post an invoice](docs/cover-en.png)
+
 ## Contents
 
 - [Features](#features)

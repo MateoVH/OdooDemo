@@ -11,6 +11,8 @@ Librería para **.NET 8** que integra aplicaciones con **Odoo** a través de su 
 
 El cliente XML-RPC está escrito desde cero sobre `HttpClient` y `System.Xml`, sin librerías de terceros. Los mensajes de error están en **español e inglés**.
 
+![Conector Odoo para .NET: crear y publicar una factura](docs/portada.png)
+
 ## Contenido
 
 - [Características](#características)
