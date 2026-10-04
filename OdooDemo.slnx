@@ -1,0 +1,22 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path=".github/workflows/ci.yml" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+    <File Path="docker-compose.yml" />
+    <File Path="global.json" />
+    <File Path="LICENSE" />
+    <File Path="README.en.md" />
+    <File Path="README.md" />
+  </Folder>
+  <Folder Name="/samples/">
+    <Project Path="samples/OdooConnector.Sample/OdooConnector.Sample.csproj" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/OdooConnector/OdooConnector.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/OdooConnector.Tests/OdooConnector.Tests.csproj" />
+  </Folder>
+</Solution>

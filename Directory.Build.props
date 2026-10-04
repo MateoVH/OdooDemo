@@ -1,0 +1,17 @@
+<Project>
+
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+
+    <Authors>Mateo Vergara</Authors>
+    <Copyright>Copyright (c) 2026 Mateo Vergara</Copyright>
+    <RepositoryUrl>https://github.com/MateoVH/OdooDemo</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+
+    <!-- Deterministic paths in PDBs when building on GitHub Actions. -->
+    <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+
+</Project>

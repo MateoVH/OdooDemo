@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <AnalysisLevel>latest-recommended</AnalysisLevel>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <!-- Messages are in English (Resources/Strings.resx) with a Spanish satellite assembly (Strings.es.resx). -->
+    <NeutralLanguage>en</NeutralLanguage>
+
+    <PackageId>OdooConnector</PackageId>
+    <Version>1.0.0</Version>
+    <Description>Lightweight .NET 8 connector for the Odoo external XML-RPC API: read contacts (res.partner), create and post invoices (account.move) and query any model with a typed domain builder.</Description>
+    <PackageTags>odoo;erp;xml-rpc;xmlrpc;invoicing;accounting</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/MateoVH/OdooDemo</PackageProjectUrl>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Http" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="OdooConnector.Tests" />
+  </ItemGroup>
+
+</Project>

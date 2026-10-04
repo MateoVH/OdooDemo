@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v7
+
+      # The .NET 10 SDK builds the solution; the .NET 8 runtime runs the net8.0 tests.
+      - uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: |
+            8.0.x
+            10.0.x
+
+      - name: Restore
+        run: dotnet restore OdooDemo.slnx
+
+      - name: Build
+        run: dotnet build OdooDemo.slnx --configuration Release --no-restore
+
+      - name: Test
+        run: dotnet test --solution OdooDemo.slnx --configuration Release --no-build
+
+      - name: Pack
+        run: dotnet pack src/OdooConnector/OdooConnector.csproj --configuration Release --no-build --output artifacts
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: nuget-package
+          path: artifacts/

@@ -1,0 +1,28 @@
+# Local Odoo to try the connector: `docker compose up -d`, then open http://localhost:8069.
+# Pick another major version with ODOO_VERSION (e.g. `ODOO_VERSION=19 docker compose up -d`).
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: odoo
+      POSTGRES_PASSWORD: odoo
+    volumes:
+      - odoo-db:/var/lib/postgresql/data
+
+  odoo:
+    image: odoo:${ODOO_VERSION:-18}
+    depends_on:
+      - db
+    ports:
+      - "8069:8069"
+    environment:
+      HOST: db
+      USER: odoo
+      PASSWORD: odoo
+    volumes:
+      - odoo-data:/var/lib/odoo
+
+volumes:
+  odoo-db:
+  odoo-data:

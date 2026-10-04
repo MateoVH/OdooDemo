@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <!-- Options -->
+  <data name="UrlRequired" xml:space="preserve">
+    <value>The Odoo URL (Odoo:Url) is required, e.g. https://mycompany.odoo.com.</value>
+  </data>
+  <data name="UrlNotHttp" xml:space="preserve">
+    <value>The Odoo URL (Odoo:Url) must be an absolute http(s) URL, but was '{0}'.</value>
+  </data>
+  <data name="UrlHasQuery" xml:space="preserve">
+    <value>The Odoo URL (Odoo:Url) must not contain a query string or fragment, but was '{0}'.</value>
+  </data>
+  <data name="DatabaseRequired" xml:space="preserve">
+    <value>The Odoo database name (Odoo:Database) is required.</value>
+  </data>
+  <data name="UsernameRequired" xml:space="preserve">
+    <value>The Odoo username (Odoo:Username) is required.</value>
+  </data>
+  <data name="ApiKeyRequired" xml:space="preserve">
+    <value>The Odoo API key (Odoo:ApiKey) is required.</value>
+  </data>
+  <data name="InvalidOptions" xml:space="preserve">
+    <value>Invalid Odoo options: {0}</value>
+  </data>
+
+  <!-- Client -->
+  <data name="AuthenticationRejected" xml:space="preserve">
+    <value>Odoo rejected the credentials of user '{0}' on database '{1}'. Check the username and the API key.</value>
+  </data>
+  <data name="AccessDenied" xml:space="preserve">
+    <value>Odoo denied access: {0}</value>
+  </data>
+  <data name="ServerUnreachable" xml:space="preserve">
+    <value>Could not reach Odoo at {0}: {1}</value>
+  </data>
+  <data name="RequestTimedOut" xml:space="preserve">
+    <value>The request to {0} timed out.</value>
+  </data>
+  <data name="InvalidResponse" xml:space="preserve">
+    <value>Odoo answered {0} with a document that is not valid XML-RPC. Check that the URL points to an Odoo server.</value>
+  </data>
+  <data name="HttpNotFound" xml:space="preserve">
+    <value>Odoo returned HTTP 404 for {0}. Check that the configured URL is the root of the Odoo server (e.g. https://mycompany.odoo.com) and not a page of the web client.</value>
+  </data>
+  <data name="HttpError" xml:space="preserve">
+    <value>Odoo returned HTTP {0} ({1}) for {2}.</value>
+  </data>
+  <data name="UnexpectedResult" xml:space="preserve">
+    <value>Odoo returned an unexpected value for {0}.{1}: {2}.</value>
+  </data>
+  <data name="EmptyFault" xml:space="preserve">
+    <value>Odoo returned an error without a description.</value>
+  </data>
+
+  <!-- Records and domains -->
+  <data name="FieldMissing" xml:space="preserve">
+    <value>The field '{0}' is not part of this record. Make sure it is included in the fields requested from Odoo.</value>
+  </data>
+  <data name="FieldInvalidType" xml:space="preserve">
+    <value>The field '{0}' cannot be read as {1}: Odoo returned a value of type {2}.</value>
+  </data>
+  <data name="EmptyDomainNegation" xml:space="preserve">
+    <value>An empty domain cannot be negated.</value>
+  </data>
+
+  <!-- Invoices -->
+  <data name="InvoicePartnerRequired" xml:space="preserve">
+    <value>PartnerId must be the id of an existing contact.</value>
+  </data>
+  <data name="InvoiceLinesRequired" xml:space="preserve">
+    <value>An invoice needs at least one line.</value>
+  </data>
+  <data name="InvoiceLineNull" xml:space="preserve">
+    <value>Invoice line {0} is null.</value>
+  </data>
+  <data name="InvoiceLineDescriptionRequired" xml:space="preserve">
+    <value>Invoice line {0} needs a Description or a ProductId.</value>
+  </data>
+  <data name="InvoiceLineDiscountOutOfRange" xml:space="preserve">
+    <value>The discount of invoice line {0} must be between 0 and 100.</value>
+  </data>
+  <data name="UnknownInvoiceType" xml:space="preserve">
+    <value>Unknown invoice type.</value>
+  </data>
+  <data name="NotAnInvoiceMoveType" xml:space="preserve">
+    <value>'{0}' is not an invoice move type.</value>
+  </data>
+
+  <!-- XML-RPC serialization -->
+  <data name="NestingTooDeep" xml:space="preserve">
+    <value>The value is nested more than {0} levels deep; it probably contains a reference cycle.</value>
+  </data>
+  <data name="UnsupportedType" xml:space="preserve">
+    <value>Values of type '{0}' cannot be sent over XML-RPC. Use strings, numbers, booleans, dates, byte arrays, dictionaries or collections.</value>
+  </data>
+  <data name="IntegerTooLarge" xml:space="preserve">
+    <value>Integers larger than Int64.MaxValue cannot be sent over XML-RPC.</value>
+  </data>
+  <data name="NonFiniteNumber" xml:space="preserve">
+    <value>XML-RPC cannot represent the value {0}.</value>
+  </data>
+  <data name="StructKeyNotString" xml:space="preserve">
+    <value>XML-RPC struct member names must be strings.</value>
+  </data>
+
+  <!-- XML-RPC parsing -->
+  <data name="NotAMethodResponse" xml:space="preserve">
+    <value>The document is not an XML-RPC methodResponse.</value>
+  </data>
+  <data name="MissingResponseValue" xml:space="preserve">
+    <value>The methodResponse does not contain a &lt;params&gt;&lt;param&gt;&lt;value&gt; element.</value>
+  </data>
+  <data name="FaultWithoutValue" xml:space="preserve">
+    <value>The &lt;fault&gt; element has no &lt;value&gt;.</value>
+  </data>
+  <data name="FaultNotStruct" xml:space="preserve">
+    <value>The &lt;fault&gt; value is not a struct.</value>
+  </data>
+  <data name="UnsupportedXmlRpcType" xml:space="preserve">
+    <value>Unsupported XML-RPC type &lt;{0}&gt;.</value>
+  </data>
+  <data name="InvalidInt32" xml:space="preserve">
+    <value>'{0}' is not a valid XML-RPC 32-bit integer.</value>
+  </data>
+  <data name="InvalidInt64" xml:space="preserve">
+    <value>'{0}' is not a valid XML-RPC 64-bit integer.</value>
+  </data>
+  <data name="InvalidBoolean" xml:space="preserve">
+    <value>'{0}' is not a valid XML-RPC boolean.</value>
+  </data>
+  <data name="InvalidDouble" xml:space="preserve">
+    <value>'{0}' is not a valid XML-RPC double.</value>
+  </data>
+  <data name="InvalidDateTime" xml:space="preserve">
+    <value>'{0}' is not a valid XML-RPC dateTime.iso8601 value.</value>
+  </data>
+  <data name="StructMemberWithoutName" xml:space="preserve">
+    <value>A struct &lt;member&gt; is missing its &lt;name&gt;.</value>
+  </data>
+  <data name="StructMemberWithoutValue" xml:space="preserve">
+    <value>The struct member '{0}' is missing its &lt;value&gt;.</value>
+  </data>
+</root>
